@@ -1,6 +1,6 @@
-# [Bloom Filter](https://www.jasondavies.com/bloomfilter/)
+# [Bit Vector](https://en.wikipedia.org/wiki/Bit_array)
 
-> A Bloom filter is a space-efficient probabilistic data structure, conceived by Burton Howard Bloom in 1970, that is used to test whether an element is a member of a set. False positive matches are possible, but false negatives are not, thus a Bloom filter has a 100% recall rate.
+> A bit array (also known as bitmap, bitset, bit string, or bit vector) is an array data structure that compactly stores bits. It can be used to implement a simple set data structure. A bit array is effective at exploiting bit-level parallelism in hardware to perform operations quickly. 
 
 ## License
 [MIT](https://opensource.org/licenses/MIT)
