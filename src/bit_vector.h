@@ -2,9 +2,11 @@
 #define INCLUDE_BIT_VECTOR
 
 #include <iostream>
+#include <exception>
+#include <stdexcept>
 #include <memory>
 
-template <typename data_type>
+template <class data_type>
 class BitVector {
     
 public:
@@ -13,7 +15,13 @@ public:
      * @param  {void}
      * @return {BitVector} The new BitVector object.
      */
-    BitVector (void) {};
+    BitVector (void) {
+        this->internal_size = 1;
+        this->internal_array = new data_type[this->internal_size];
+        this->total_count = 0;
+    };
+    
+    ~BitVector (void) {};
     
     /**
      * Inserts a single element into the BitVector at the given position.
@@ -67,13 +75,13 @@ public:
     
 private:
     /** Capacity of the internal array. */
-    size_t internal_size = 1;
+    size_t internal_size;
     
     /** Pointer to the internal array. */
     data_type* internal_array;
     
     /** Total amount of elements in the array. */
-    size_t total_count = 0;
+    size_t total_count;
     
 };
 
