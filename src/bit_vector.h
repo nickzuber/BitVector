@@ -63,14 +63,14 @@ public:
 		 * @param  {const BitVector&}
 		 * @return {const BitVector&} The complement BitVector.
 		 */
-		BitVector& union (const BitVector& vec) const;
+		BitVector& unionize (const BitVector& vec) const;
 
 		/**
 		 * Takes the union of the calling BitVector.
 		 * @param  {const BitVector&}
 		 * @return {const BitVector&} The complement BitVector.
 		 */
-		BitVector& union () const;
+		BitVector& unionize () const;
 
 		/**
 		 * Takes the union of the argument BitVector.

@@ -7,7 +7,7 @@ int main(int argc, const char * argv[]) {
     
     BitVector<int> vec;
     
-    cout << vec.capacity() << endl;
+    cout << vec.size() << endl;
     
     return 0;
 }
