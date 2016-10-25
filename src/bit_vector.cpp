@@ -53,3 +53,4 @@ template <class data_type>
 bool BitVector<data_type>::resize (const size_t& size) const {
     return true;
 };
+
