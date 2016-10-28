@@ -50,7 +50,15 @@ size_t BitVector<data_type>::size () const {
  * @return {bool}               The success of resizing.
  */
 template <class data_type>
-bool BitVector<data_type>::resize (const size_t& size) const {
-    return true;
+void BitVector<data_type>::resize (const size_t& size) const {
+	unsigned int i = 0;
+	data_type* new_internal_array = new data_type[size];
+	for (auto d : this->internal_array) {
+		new_internal_array[i++] = d;
+	}
+	this->internal_size = size;
+	delete [] this->internal_array;
+	this->internal_array = new_internal_array;
 };
+
 

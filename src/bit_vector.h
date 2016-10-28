@@ -98,7 +98,7 @@ public:
      * @param  {const size_t&} size The new capacity.
      * @return {bool}               The success of resizing.
      */
-    bool resize (const size_t& size) const;
+    void resize (const size_t& size) const;
     
 private:
     /** Capacity of the internal array. */

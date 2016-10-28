@@ -1,7 +1,7 @@
 # Build source, tests, examples, benchmarks
 
 COMPILER = -c++
-FLAGS    = -Wall
+FLAGS    = -std=c++11 -Wall -Wno-c++11-extensions
 
 BUILD += bitvector
 BUILD += examples
