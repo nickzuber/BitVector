@@ -29,9 +29,12 @@ data_type BitVector<data_type>::operator[] (const size_t& pos) const {
  */
 template <class data_type>
 data_type BitVector<data_type>::get (const size_t& pos) const {
-    if (pos >= this->internal_size) {
-        throw std::range_error("Attempted to access an illegal position in BitVector.");
-    }
+	if (pos < 0 || pos >= this->internal_size * sizeof(data_type) * BITS_PER_BYTE) {
+		throw std::range_error("Attempted to access an illegal position in BitVector.");
+	}
+	int index = floor((pos + 1) / (sizeof(data_type) * BITS_PER_BYTE));
+	int seqCpy = this->internal_array[index];
+	return (seqCpy >> ((sizeof(data_type) * BITS_PER_BYTE) - index));
 };
 
 /**

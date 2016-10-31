@@ -5,11 +5,15 @@
 #include <exception>
 #include <stdexcept>
 #include <memory>
+#include <math.h>
 
 template <class data_type>
 class BitVector {
     
 public:
+
+		static const int BITS_PER_BYTE = 8;
+
     /**
      * Creates an empty BitVector.
      * @param  {void}
