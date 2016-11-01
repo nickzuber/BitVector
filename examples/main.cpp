@@ -9,10 +9,8 @@ int main(int argc, const char * argv[]) {
 	BitVector<int> vec;
 	cout << "Size on creation: " << vec.size() << endl;
 
-	vec.resize(10);
-	cout << "After resize to 10: " << vec.size() << endl;
-
-	cout << vec.get(0) << endl;
+	vec.set(0, 1);
+	cout << "After setting `0` to `1`: " << vec.get(0) << endl;
 
 	return 0;
 }

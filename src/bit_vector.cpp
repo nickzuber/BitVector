@@ -5,10 +5,10 @@
  * Inserts a single element into the BitVector at the given position.
  * @param  {const size_t&}    pos  The position within the vector.
  * @param  {const data_type&} data The data to insert.
- * @return {bool}                  The success of the insertion.
+ * @return {void}
  */
 template <class data_type>
-bool BitVector<data_type>::set (const size_t& pos, const data_type& data) {
+void BitVector<data_type>::set (const size_t& pos, const data_type& data) {
     return true;
 };
 

@@ -37,9 +37,9 @@ public:
      * Attempts to set a particular bit within the BitVector.
      * @param  {const size_t&}    pos  The position within the vector.
      * @param  {const data_type&} data The bit to set.
-     * @return {bool}                  The success of the set.
+     * @return {void}
      */
-    bool set (const size_t& pos, const data_type& data);
+    void set (const size_t& pos, const data_type& data);
     
     /**
      * Syntactic sugar for the `get` method -- provides the value of bit at the given position.
