@@ -3,13 +3,21 @@
 
 /**
  * Inserts a single element into the BitVector at the given position.
- * @param  {const size_t&}    pos  The position within the vector.
- * @param  {const data_type&} data The data to insert.
+ * @param  {const size_t&}  pos  The position within the vector.
+ * @param  {const bool&} data The data to insert.
  * @return {void}
  */
 template <class data_type>
-void BitVector<data_type>::set (const size_t& pos, const data_type& data) {
-	
+void BitVector<data_type>::set (const size_t& pos, const bool& data) {
+	if (pos < 0 || pos >= this->internal_size * sizeof(data_type) * BITS_PER_BYTE) {
+		throw std::range_error("Attempted to access an illegal position in BitVector.");
+	}
+	int index = floor((pos + 1) / (sizeof(data_type) * BITS_PER_BYTE));
+	if (data) {
+		this->internal_array[index] |= 1 << ((sizeof(data_type) * BITS_PER_BYTE) - index);
+	} else {
+		this->internal_array[index] &= ~(1 << ((sizeof(data_type) * BITS_PER_BYTE) - index));
+	}
 };
 
 /**

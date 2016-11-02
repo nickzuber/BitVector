@@ -9,8 +9,8 @@ int main(int argc, const char * argv[]) {
 	BitVector<int> vec;
 	cout << "Size on creation: " << vec.size() << endl;
 
-	vec.set(0, 1);
-	cout << "After setting `0` to `1`: " << vec.get(0) << endl;
+	vec.set(0, true);
+	cout << "After setting 0 to true: \n vect.get(0) => " << vec.get(0) << endl;
 
 	return 0;
 }
