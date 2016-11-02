@@ -52,7 +52,7 @@ data_type BitVector<data_type>::get (const size_t& pos) const {
  */
 template <class data_type>
 size_t BitVector<data_type>::size () const {
-    return this->internal_size;
+    return this->internal_size * sizeof(data_type) * BITS_PER_BYTE;
 };
 
 /**
