@@ -9,7 +9,7 @@
  */
 template <class data_type>
 void BitVector<data_type>::set (const size_t& pos, const data_type& data) {
-    return true;
+	
 };
 
 /**
