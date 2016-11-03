@@ -22,6 +22,7 @@ public:
     BitVector (void) {
         this->internal_size = 1;
         this->internal_array = new data_type[this->internal_size];
+				this->internal_array[0] = 0;
     };
     
 		/**

@@ -3,8 +3,8 @@
 
 /**
  * Inserts a single element into the BitVector at the given position.
- * @param  {const size_t&}  pos  The position within the vector.
- * @param  {const bool&} data The data to insert.
+ * @param  {const size_t&} pos  The position within the vector.
+ * @param  {const bool&}   data The data to insert.
  * @return {void}
  */
 template <class data_type>
