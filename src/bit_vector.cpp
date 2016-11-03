@@ -27,7 +27,7 @@ void BitVector<data_type>::set (const size_t& pos, const bool& data) {
  */
 template <class data_type>
 data_type BitVector<data_type>::operator[] (const size_t& pos) const {
-    return this->at(pos);
+    return this->get(pos);
 };
 
 /**

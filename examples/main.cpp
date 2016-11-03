@@ -10,12 +10,10 @@ int main(int argc, const char * argv[]) {
 	cout << "Size on creation: " << vec.size() << endl;
 
 	vec.set(0, true);
-	// vec.set(1, false);
-	// vec.set(2, true);
+	vec.set(30, true);
 
-	for (int i = 0; i < vec.size(); ++i) {
-		cout << "vec.get(" << i << ") => " << vec.get(i) << endl;
-	}
-
+	cout << "vec.get(0) => " << vec[0] << endl;
+	cout << "vec.get(30) => " << vec[30] << endl;
+	
 	return 0;
 }
