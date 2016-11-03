@@ -12,11 +12,11 @@ void BitVector<data_type>::set (const size_t& pos, const bool& data) {
 	if (pos < 0 || pos >= this->internal_size * sizeof(data_type) * BITS_PER_BYTE) {
 		throw std::range_error("Attempted to access an illegal position in BitVector.");
 	}
-	int index = floor((pos + 1) / (sizeof(data_type) * BITS_PER_BYTE));
+	int index = floor((pos + 1) / ((sizeof(data_type) * BITS_PER_BYTE)));
 	if (data) {
-		this->internal_array[index] |= 1 << ((sizeof(data_type) * BITS_PER_BYTE) - index);
+		this->internal_array[index] |= 1 << ((sizeof(data_type) * BITS_PER_BYTE) - pos);
 	} else {
-		this->internal_array[index] &= ~(1 << ((sizeof(data_type) * BITS_PER_BYTE) - index));
+		this->internal_array[index] &= ~(1 << ((sizeof(data_type) * BITS_PER_BYTE) - pos));
 	}
 };
 
@@ -42,7 +42,7 @@ data_type BitVector<data_type>::get (const size_t& pos) const {
 	}
 	int index = floor((pos + 1) / (sizeof(data_type) * BITS_PER_BYTE));
 	int seqCpy = this->internal_array[index];
-	return (seqCpy >> ((sizeof(data_type) * BITS_PER_BYTE) - index));
+	return (seqCpy >> ((sizeof(data_type) * BITS_PER_BYTE) - pos)) & 1;
 };
 
 /**
