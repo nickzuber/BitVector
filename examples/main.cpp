@@ -15,5 +15,7 @@ int main(int argc, const char * argv[]) {
 	cout << "vec.get(0) => " << vec[0] << endl;
 	cout << "vec.get(30) => " << vec[30] << endl;
 	
+	cout << "vec.size() => " << vec.size() << endl;
+
 	return 0;
 }
