@@ -13,7 +13,7 @@ int main(int argc, const char * argv[]) {
 	vec.set(30, true);
 
 	cout << "vec.get(0) => " << vec[0] << endl;
-	cout << "vec.get(30) => " << vec[30] << endl;
+	cout << "vec.get(31) => " << vec[31] << endl;
 
 	try {
 		cout << "vec.get(50) => " << vec[50] << endl;
